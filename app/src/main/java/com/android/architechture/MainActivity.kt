@@ -17,16 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val list = mutableListOf<User>()
-        for (i in 1..50){
+        for (i in 1..50) {
             list.add(
                 User(
-                "Field " + i,
-                "Field " + i,
-                "Field " + i,
-                "Field " + i,
-                "Field " + i,
-                "Field " + i
-            )
+                    "Field " + i,
+                    "Field " + i,
+                    "Field " + i,
+                    "Field " + i,
+                    "Field " + i,
+                    "Field " + i
+                )
             )
         }
         binding.rcv.apply {
@@ -36,5 +36,11 @@ class MainActivity : AppCompatActivity() {
             hasFixedSize()
             adapter = MyAdapter(list)
         }
+
+        val person = Person.Builder()
+            .name("AAAAAAAAAAAAAA")
+            .build()
+
+        println(person)
     }
 }
