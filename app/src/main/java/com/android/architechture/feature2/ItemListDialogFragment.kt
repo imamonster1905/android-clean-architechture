@@ -78,5 +78,11 @@ class ItemListDialogFragment : BottomSheetDialogFragment() {
                 }
             }
 
+        fun newInstance2(itemCount: Int): ItemListDialogFragment =
+            ItemListDialogFragment().apply {
+                arguments = Bundle().apply {
+                    putInt(ARG_ITEM_COUNT, itemCount)
+                }
+            }
     }
 }
